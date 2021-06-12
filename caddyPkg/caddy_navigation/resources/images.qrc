@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/icon.png</file>
+        <file>images/navigation.png</file>
+        <file>images/square-rounded-darkGray.png</file>
+    </qresource>
+</RCC>

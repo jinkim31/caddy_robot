@@ -1,0 +1,16 @@
+<launch>
+
+  <node name="caddy_serial" pkg="caddy_serial" type="caddy_serial" >
+  </node>
+
+
+  <node name="gps_serial" pkg="gps_serial" type="gps_serial" >
+  <param name="serial_port"         type="string" value="/dev/USBGPS"/>
+  </node>
+
+  <node name="serial_mcu" pkg="serial_mcu" type="serial_mcu" >
+  <param name="serial_port"         type="string" value="/dev/USBSERIAL"/>
+  </node>
+
+</launch>
+
