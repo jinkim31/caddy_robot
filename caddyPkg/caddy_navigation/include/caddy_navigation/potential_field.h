@@ -7,7 +7,7 @@
 #include <sensor_msgs/LaserScan.h>
 
 #define KATT 0.5
-#define KREP 5
+#define KREP 1
 #define RAD2DEG(x) ((x)*180./M_PI)
 #define DEG2RAD(x) ((x)*M_PI/180.)
 #define VIRTUALOBS 10

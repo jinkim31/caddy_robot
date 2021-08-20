@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>901</width>
-    <height>570</height>
+    <width>1038</width>
+    <height>699</height>
    </rect>
   </property>
   <property name="palette">
@@ -456,7 +456,7 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>30</y>
+      <y>40</y>
       <width>201</width>
       <height>161</height>
      </rect>
@@ -475,7 +475,7 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>210</y>
+      <y>220</y>
       <width>161</width>
       <height>71</height>
      </rect>
@@ -489,7 +489,7 @@
      <string notr="true"/>
     </property>
     <property name="text">
-     <string>Set</string>
+     <string>IMU</string>
     </property>
    </widget>
   </widget>

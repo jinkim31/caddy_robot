@@ -41,8 +41,8 @@ MainWindow::MainWindow(int argc, char** argv, QWidget *parent)
     QObject::connect(&qnode, SIGNAL(odompos()), this, SLOT(odomPosCallback()));
     QObject::connect(&qnode, SIGNAL(imu()), this, SLOT(imudataCallback()));
 
-    m_PF.setPF(KATT, KREP, 1.5, 5);              // k_att, k_rep, rhoZero, kernel size
-    m_kinematics.init(0.15,0.15, 0.8, 0.5); // radius_r, radius_l, phi, k_p
+    m_PF.setPF(KATT, KREP, 2.5, 3);              // k_att, k_rep, rhoZero, kernel size
+    m_kinematics.init(0.15,0.15, 1.0, 0.2); // radius_r, radius_l, phi, k_p
 
     mtimer = new QTimer(this);
     connect(mtimer, SIGNAL(timeout()),this, SLOT(timerCallback()));
@@ -103,7 +103,7 @@ void MainWindow::timerCallback()
         double dist = sqrt(goalX*goalX + goalY*goalY);
         caddy_msg::wheel_msg wheelData;
         cout<<"dist : "<<dist<<endl;
-        if(dist > 1.0)
+        if(dist > 4.5)
         {
             m_PF.calPF(qnode.m_laserData, goalX, goalY); // (lidar, goalpositionX, goal positionY)
             m_PF.calVelocity(DEG2RAD(m_imuData.yaw + 90)); // IMU // set north direction
@@ -246,7 +246,7 @@ void MainWindow::updatePlot()
     ui.customPlot->setMinimumHeight(500);
     ui.customPlot->setMinimumWidth(600);
     ui.customPlot->xAxis->setRange(-112.0, 112.0);
-    ui.customPlot->yAxis->setRange(0, 16.0);
+    ui.customPlot->yAxis->setRange(0, 5.0);
 
     QCPBars *bars = new QCPBars( ui.customPlot->xAxis,  ui.customPlot->yAxis);
     bars->setSelectable(QCP::stSingleData);
@@ -355,10 +355,6 @@ void MainWindow::updatePlot()
 
     }
 //        ui.customPlot->savePng("obs", 500,600);
-
-
-
-
 }
 
 
@@ -376,6 +372,7 @@ void MainWindow::makePlot()
         ui.customPlot->setInteraction(QCP::iSelectPlottables, true);
         ui.customPlot->setInteraction(QCP::iSelectItems, true);
     }
+
     // set Plot size
     {
         ui.customPlot->setMinimumHeight(500);

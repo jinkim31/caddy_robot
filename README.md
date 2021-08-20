@@ -1,6 +1,6 @@
 # **GPS based Caddy Robot project**
 광운대학교 로봇학부 캡스톤 - 캐디 로봇 프로젝트  
-Kwangwoon University Robotics Intelligence Caddy Robot Project---
+Kwangwoon University Robotics Intelligence Caddy Robot Project
 
 ## **What Project?**
 ### 골프장에서 골퍼의 짐을 로봇에 실어 골퍼의 짐을 대신 들어주며 골퍼를 따라가는 로봇
@@ -18,7 +18,7 @@ Kwangwoon University Robotics Intelligence Caddy Robot Project---
 ## **Dependency Install**
 ###
  * sudo apt install ros-melodic-gps-common
- * sudo apt install ros-melodic-nav-msgs 
+ * sudo apt install ros-melodic-nav-msgs
  ###
  ---
  ## **Build**
@@ -27,4 +27,8 @@ Kwangwoon University Robotics Intelligence Caddy Robot Project---
   2. Next, build a caddy Pkg.
 ###
 ---
+## **Hardware**
 
+![Hardware](./Figure/Hardware.png)
+
+## 

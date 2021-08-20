@@ -76,7 +76,7 @@ bool MainWindow::open_serialBT()
     m_serialBT = new QSerialPort(this);
     //    m_serialBT -> setPortName(ui.cb_BT->currentText());
 //    m_serialBT -> setPortName("ESP32_SPP___");
-    m_serialBT -> setPortName("/dev/rfcomm0");
+    m_serialBT -> setPortName("/dev/rfcomm2");
     m_serialBT -> setBaudRate(QSerialPort::Baud115200);
     m_serialBT -> setDataBits(QSerialPort::Data8);
     m_serialBT -> setParity(QSerialPort::NoParity);
