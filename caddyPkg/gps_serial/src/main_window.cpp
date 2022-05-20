@@ -49,7 +49,8 @@ bool MainWindow::open_serialGPS()
     cout<<"qnode.serial_port.c_str():-"<<qnode.serial_port.c_str()<<"a"<<endl;
     //    string port = .toStdString();
     m_serialGPS = new QSerialPort(this);
-    m_serialGPS -> setPortName(QString(qnode.serial_port.c_str()));
+//    m_serialGPS -> setPortName(QString(qnode.serial_port.c_str()));
+    m_serialGPS -> setPortName("USBGPS");
     m_serialGPS -> setBaudRate(QSerialPort::Baud9600);
     m_serialGPS -> setDataBits(QSerialPort::Data8);
     m_serialGPS -> setParity(QSerialPort::NoParity);
